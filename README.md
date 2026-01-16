@@ -55,7 +55,20 @@ If you use this work, please cite the accompanying report:
 
 > Kurmanbekova, A., Chen, C., & Lin, M. (2025). *Can Machines Read Minds? Detecting Interiority in Narrative Texts*. University of California, Berkeley.
 
-## Authors
-- Aigerim Kurmanbekova  
-- Chelsea Chen  
-- Michelle Lin
+## Repository Structure
+
+This repository contains a mix of data files, notebooks, and documentation used for annotation, modeling, and analysis.
+
+### Data/
+Files related to dataset construction, sampling, and annotation.
+- **`.ipynb`** — Jupyter notebooks for data sampling, preprocessing, and exploratory analysis  
+- **`.csv`** — Annotated datasets and metadata (e.g. paragraph-level labels, book-level splits)
+
+### Modeling/
+Notebooks and artifacts used for training and evaluating models.
+- **`.ipynb`** — Jupyter notebooks for baseline models, fine-tuned transformer models, and prompted large language models (e.g. BERT, Flan-T5, LLaMA)
+- **`.csv`** — Gold labels and intermediate evaluation files used during training and testing
+
+### Documentation
+- **`README.md`** — Project overview, methodology, and results summary
+- **`.pdf`** — Full final report describing the dataset, annotation scheme, modeling experiments, and analysis

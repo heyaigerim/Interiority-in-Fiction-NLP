@@ -59,16 +59,16 @@ If you use this work, please cite the accompanying report:
 
 This repository contains a mix of data files, notebooks, and documentation used for annotation, modeling, and analysis.
 
-### Data/
+## Data
 Files related to dataset construction, sampling, and annotation.
 - **`.ipynb`** — Jupyter notebooks for data sampling, preprocessing, and exploratory analysis  
 - **`.csv`** — Annotated datasets and metadata (e.g. paragraph-level labels, book-level splits)
 
-### Modeling/
+## Modeling
 Notebooks and artifacts used for training and evaluating models.
 - **`.ipynb`** — Jupyter notebooks for baseline models, fine-tuned transformer models, and prompted large language models (e.g. BERT, Flan-T5, LLaMA)
 - **`.csv`** — Gold labels and intermediate evaluation files used during training and testing
 
-### Documentation
+## Documentation
 - **`README.md`** — Project overview, methodology, and results summary
 - **`.pdf`** — Full final report describing the dataset, annotation scheme, modeling experiments, and analysis

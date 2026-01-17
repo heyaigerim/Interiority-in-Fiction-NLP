@@ -5,14 +5,14 @@ Computational analysis of narrative interiority in late nineteenth- and early tw
 ## Overview
 Interiority—the representation of a character’s inner thoughts, feelings, and perceptions—is a core element of narrative fiction, yet it remains difficult to identify consistently using computational methods. This project investigates whether interiority can be detected automatically at the paragraph level and where current NLP models succeed or fail in capturing subtle forms of inner life.
 
-We introduce a three-level annotation scheme (**high**, **low**, **none**) grounded in narratological theory and construct a manually annotated dataset of 600 passages drawn from 15 literary works published between 1890 and 1930. Using this dataset, we evaluate traditional classifiers, fine-tuned transformer models, and prompted large language models on the task of interiority classification.
+We introduce a three-level annotation scheme (high, low, none) grounded in narratological theory and construct a manually annotated dataset of 600 passages drawn from 15 literary works published between 1890 and 1930. Using this dataset, we evaluate traditional classifiers, fine-tuned transformer models, and prompted large language models on the task of interiority classification.
 
 ## Key Contributions
-- A **theory-informed operationalization of narrative interiority** based on narratology
-- A **manually annotated dataset** of 600 literary paragraphs with graded interiority labels
-- Analysis of **inter-annotator agreement** highlighting ambiguity in implicit interiority
-- A **comparative evaluation** of baseline NLP models, fine-tuned transformers, and large language models
-- Empirical evidence that **explicit interiority is learnable**, while indirect forms (e.g. free indirect discourse) remain challenging
+- A theory-informed operationalization of narrative interiority based on narratology
+- A manually annotated dataset of 600 literary paragraphs with graded interiority labels
+- Analysis of inter-annotator agreement highlighting ambiguity in implicit interiority
+- A comparative evaluation of baseline NLP models, fine-tuned transformers, and large language models
+- Empirical evidence that xplicit interiority is learnable, while indirect forms (e.g. free indirect discourse) remain challenging
 
 ## Dataset
 - **Texts:** 15 works of English-language fiction (1890–1930), spanning modernist, realist, and genre fiction
@@ -33,7 +33,7 @@ Annotation was performed by three graduate-level annotators using shared guideli
 
 Evaluation was conducted using both paragraph-level random splits and book-level splits to test generalization to unseen texts.
 
-## Results (Summary)
+## Results 
 - Large language models achieved the strongest overall performance, with **LLaMA-3.3-70B (few-shot)** performing best on book-level splits.
 - Fine-tuned encoder models (notably **RoBERTa-base**) performed competitively despite lower computational cost.
 - Across all models, the **low interiority** category proved most difficult to predict, mirroring human disagreement.
@@ -44,12 +44,6 @@ Evaluation was conducted using both paragraph-level random splits and book-level
 - Class imbalance and ambiguity particularly affect performance on low-interiority passages.
 - Models were evaluated with limited hyperparameter tuning to prioritize cross-model comparison.
 
-## Future Work
-- Scaling annotation using high-performing LLMs to analyze full novels
-- Expanding the corpus to contemporary texts and non-literary domains
-- Studying how access to interiority varies across characters, genres, and social groups
-- Improving robustness via prompt variation and repeated inference
-
 ## Citation
 If you use this work, please cite the accompanying report:
 
@@ -59,16 +53,16 @@ If you use this work, please cite the accompanying report:
 
 This repository contains a mix of data files, notebooks, and documentation used for annotation, modeling, and analysis.
 
-## Data
+### Data
 Files related to dataset construction, sampling, and annotation.
 - **`.ipynb`** — Jupyter notebooks for data sampling, preprocessing, and exploratory analysis  
 - **`.csv`** — Annotated datasets and metadata (e.g. paragraph-level labels, book-level splits)
 
-## Modeling
+### Modeling
 Notebooks and artifacts used for training and evaluating models.
 - **`.ipynb`** — Jupyter notebooks for baseline models, fine-tuned transformer models, and prompted large language models (e.g. BERT, Flan-T5, LLaMA)
 - **`.csv`** — Gold labels and intermediate evaluation files used during training and testing
 
-## Documentation
+### Documentation
 - **`README.md`** — Project overview, methodology, and results summary
 - **`.pdf`** — Full final report describing the dataset, annotation scheme, modeling experiments, and analysis
